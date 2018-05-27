@@ -24,6 +24,9 @@ class FirstViewController: UITableViewController, CLLocationManagerDelegate {
             location = locationManager.location!
         }
         DataManager.sharedInstance.locations.insert(location, at: 0)
+        
+        //every time a new location is added, we need to reload the tableView to reflect the changes to the array
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -57,6 +60,38 @@ class FirstViewController: UITableViewController, CLLocationManagerDelegate {
         }
         
     }
+    
+    //MARK: - tableView Implementation
+    
+    //for a one dimensional array the answer to this function will always be 1.
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DataManager.sharedInstance.locations.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)
+        cell.tag = indexPath.row
+        //tpull the nth entry from the dataSource in order to setup the look or configuration of the cell
+        let entry: CLLocation = DataManager.sharedInstance.locations[indexPath.row]
+        
+        //configure the cell
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm:ss, MM-dd-yyyy"
+        
+        cell.textLabel?.text = "\(entry.coordinate.latitude), \(entry.coordinate.longitude) "
+        
+        cell.detailTextLabel?.text = dateFormatter.string(from: entry.timestamp)
+        
+        return cell
+        
+    }
+    
+    
 
 
 }
