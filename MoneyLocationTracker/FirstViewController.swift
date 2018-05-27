@@ -40,6 +40,7 @@ class FirstViewController: UITableViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         

@@ -22,7 +22,26 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        let locations = DataManager.sharedInstance.locations
+        var annotations = [MKPointAnnotation]()
+        
+        
+        for location in locations {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location.coordinate
+            annotations.insert(annotation, at: annotations.count)
+        }
+        
+        let oldAnnotations = mapView!.annotations
+        mapView?.removeAnnotations(oldAnnotations)
+        
+        mapView?.addAnnotations(annotations)
+        
+        
+    }
 }
 
