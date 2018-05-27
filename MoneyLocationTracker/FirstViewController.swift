@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
-class FirstViewController: UIViewController {
-
+class FirstViewController: UITableViewController {
+    @IBAction func addLocation(_ sender: UIBarButtonItem) {
+        print("Wired up correctly!")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
