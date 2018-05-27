@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Second-->
+        <!--Lucrative Walks-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="MoneyLocationTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Lucrative Walks" image="flag-7" id="cPa-gy-q4n">
+                        <color key="badgeColor" red="0.043702105960084871" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="mapView" destination="lkE-KW-sRW" id="ZIb-3j-aFE"/>
                     </connections>
@@ -48,6 +50,7 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.15374830070004863" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Asz-dX-nyn" kind="relationship" relationship="viewControllers" id="eCb-vd-NIS"/>
@@ -98,7 +101,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="KI9-RH-OVi">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="3YT-tt-lyT">
+                        <barButtonItem key="rightBarButtonItem" image="animal-element-7" id="3YT-tt-lyT">
+                            <color key="tintColor" red="0.010953568968046726" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addLocation:" destination="OSr-WY-tA5" id="28q-Ib-405"/>
                             </connections>
@@ -109,11 +113,13 @@
             </objects>
             <point key="canvasLocation" x="1719.2" y="-356.67166416791605"/>
         </scene>
-        <!--Item-->
+        <!--Money Spots-->
         <scene sceneID="iPx-Xn-rx4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Asz-dX-nyn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Jgk-rF-Boq"/>
+                    <tabBarItem key="tabBarItem" title="Money Spots" image="earth-america-7" selectedImage="earth-america-7" id="Jgk-rF-Boq">
+                        <color key="badgeColor" red="0.003025444735234487" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qaV-nC-Jly">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -130,6 +136,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
+        <image name="animal-element-7" width="30" height="30"/>
+        <image name="earth-america-7" width="30" height="30"/>
+        <image name="flag-7" width="30" height="30"/>
     </resources>
 </document>
