@@ -41,7 +41,11 @@ class SecondViewController: UIViewController {
         
         mapView?.addAnnotations(annotations)
         
-        
+        if annotations.count > 0 {
+            let region = MKCoordinateRegionMake(annotations[0].coordinate, MKCoordinateSpanMake(0.1, 0.1))
+            mapView?.regionThatFits(region)
+        }
+        mapView?.showsUserLocation = true
     }
 }
 
