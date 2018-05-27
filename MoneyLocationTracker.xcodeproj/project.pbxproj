@@ -15,6 +15,7 @@
 		E94EE52B20BAEFC400F70FD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94EE52920BAEFC400F70FD2 /* LaunchScreen.storyboard */; };
 		E94EE53420BAF17E00F70FD2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94EE53320BAF17E00F70FD2 /* CoreLocation.framework */; };
 		E94EE53620BAF18A00F70FD2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94EE53520BAF18A00F70FD2 /* MapKit.framework */; };
+		E94EE53820BB4F6600F70FD2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94EE53720BB4F6600F70FD2 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E94EE52C20BAEFC400F70FD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94EE53320BAF17E00F70FD2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E94EE53520BAF18A00F70FD2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E94EE53720BB4F6600F70FD2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				E94EE51E20BAEFC000F70FD2 /* AppDelegate.swift */,
 				E94EE52020BAEFC000F70FD2 /* FirstViewController.swift */,
+				E94EE53720BB4F6600F70FD2 /* DataManager.swift */,
 				E94EE52220BAEFC000F70FD2 /* SecondViewController.swift */,
 				E94EE52420BAEFC000F70FD2 /* Main.storyboard */,
 				E94EE52720BAEFC400F70FD2 /* Assets.xcassets */,
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94EE52320BAEFC000F70FD2 /* SecondViewController.swift in Sources */,
+				E94EE53820BB4F6600F70FD2 /* DataManager.swift in Sources */,
 				E94EE51F20BAEFC000F70FD2 /* AppDelegate.swift in Sources */,
 				E94EE52120BAEFC000F70FD2 /* FirstViewController.swift in Sources */,
 			);
