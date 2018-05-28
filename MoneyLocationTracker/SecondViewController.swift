@@ -33,6 +33,7 @@ class SecondViewController: UIViewController {
         for location in locations {
             let annotation = MKPointAnnotation()
             annotation.coordinate = location.coordinate
+        
             annotations.insert(annotation, at: annotations.count)
         }
         
